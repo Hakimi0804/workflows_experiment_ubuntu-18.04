@@ -1,4 +1,4 @@
-name: clean
+name: list largest package
 
 on:
   workflow_dispatch:
