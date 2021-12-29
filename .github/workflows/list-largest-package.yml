@@ -16,10 +16,10 @@ jobs:
     - name: List 100 largest packages
       run: |
         echo "=============================================================================="
-        echo "Listing 100 largest packages"
+        echo "Listing 200 largest packages"
         echo "=============================================================================="
 
-        # echo "Listing 100 largest packages"
+        # echo "Listing 200 largest packages"
         dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | tail -n 100
         df -h
 
