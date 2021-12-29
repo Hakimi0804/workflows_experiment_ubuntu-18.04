@@ -33,7 +33,8 @@ jobs:
         git config --global user.name "Hakimi0804"
         git config --global user.email "hakimifirdaus944@gmail.com"
         sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php* \
-        mono* shellcheck vim* libllvm* humanity-icon-theme libgl1 libgl1-mesa-glx locales git-lfs gcc* g++* p7zip cpp*
+        mono* shellcheck vim* libllvm* humanity-icon-theme libgl1 libgl1-mesa-glx locales git-lfs gcc* g++* p7zip cpp* \
+        iproute2 libc6 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libpam0g libssl1.1 nginx nginx-common 
         sudo -E apt-get clean
         sudo -E apt-get -qq update
         sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev repo rsync flex bison aria2
