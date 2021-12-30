@@ -13,6 +13,7 @@ env:
   MANIFEST_BRANCH: android-11.0
   DEVICE: RMX2001
   DT_LINK: https://github.com/Hakimi0804/android_device_realme_RMX2001-pbrp
+  DT_BRANCH: test
   DT_PATH: device/realme/RMX2001
   TARGET: pbrp
   TZ: Asia/Kuala_Lumpur
@@ -50,7 +51,8 @@ jobs:
         repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
         repo sync -j4
         repo sync
-        git clone $DT_LINK --depth=1 --single-branch $DT_PATH
+        # git clone $DT_LINK --depth=1 --single-branch $DT_PATH
+        git clone $DT_LINK --depth=1 --single-branch -b $DT_BRANCH $DT_PATH
 
     - name: Build
       run: |
