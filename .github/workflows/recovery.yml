@@ -58,8 +58,8 @@ jobs:
       run: |
         cd work && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch omni_$DEVICE-eng && mka $TARGET
 
-    - name: Upload recovery image
-      run: |
-        cd work/out/target/product/$DEVICE
-        curl -sL https://git.io/file-transfer | sh
-        ./transfer wet recovery.img
+    - name: Upload recovery image as artifact
+      uses: actions/upload-artifact@v2.3.1
+      with:
+        name: recovery image
+        path: /home/runner/work/android_device_realme_RMX2001-pbrp/android_device_realme_RMX2001-pbrp/work/out/target/product/RMX2001/recovery.img
