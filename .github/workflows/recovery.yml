@@ -56,9 +56,10 @@ jobs:
 
     - name: Build
       run: |
-        cd work && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch omni_$DEVICE-eng && make -j4 pbrp
+        cd work && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch omni_$DEVICE-eng && make -j6 pbrp
 
     - name: Upload recovery image as artifact
+      run: cd /
       uses: actions/upload-artifact@v2.3.1
       with:
         name: recovery image
