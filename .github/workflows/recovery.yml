@@ -13,7 +13,7 @@ env:
   MANIFEST_BRANCH: android-11.0
   DEVICE: RMX2001
   DT_LINK: https://github.com/Hakimi0804/android_device_realme_RMX2001-pbrp
-  DT_BRANCH: decryption-fix
+  DT_BRANCH: android-11.0
   DT_PATH: device/realme/RMX2001
   TARGET: pbrp
   TZ: Asia/Kuala_Lumpur
