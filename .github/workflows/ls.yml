@@ -17,3 +17,14 @@ jobs:
       run: |
         pwd
         ls
+        mkdir -p im/in/here
+        cd im/in/here
+        touch bruh
+        ls
+        echo
+        echo
+        
+    - name: Run commands 2
+      run: |
+        pwd
+        ls
