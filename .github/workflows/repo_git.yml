@@ -16,13 +16,16 @@ env:
   TZ: Asia/Kuala_Lumpur
 
 jobs:
-  clean:
+  main:
     runs-on: ubuntu-18.04
     steps:
     
     - name: Checkout
       uses: actions/checkout@master
-    
+
+    - name: Cleanup
+      uses: rokibhasansagar/slimhub_actions@main
+        
     - name: repo sync
       run: |
         sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
