@@ -39,3 +39,9 @@ jobs:
     - name: Checks
       run: |
         ls
+        echo
+        echo
+        cd system
+        echo "CD'ED into system"
+        echo
+        find -type d -name '*.git'
