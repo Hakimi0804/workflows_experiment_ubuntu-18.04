@@ -53,7 +53,7 @@ jobs:
         # git clone $DT_LINK --depth=1 --single-branch $DT_PATH
         cd system/core
         echo "-------- cherry-picking for erofs ----------------"
-        git fetch https://github.com/Project-1CE/system_core -b lineage-18.1
+        git fetch https://github.com/Project-1CE/system_core lineage-18.1
         git cherry-pick b2dce4bd27fe5ef88690aa331f67359fb208d4c8
         git cherry-pick 2ef3b59442f291e6230eef14c81b906752acf748
         cd ../..
